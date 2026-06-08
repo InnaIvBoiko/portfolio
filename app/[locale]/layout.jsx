@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { SITE_URL } from '@/lib/site';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -36,9 +37,19 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
+  // hreflang map so Google serves the right language and de-duplicates the locales.
+  const languages = Object.fromEntries(
+    routing.locales.map((l) => [l, `/${l}`])
+  );
+
   return {
+    metadataBase: new URL(SITE_URL),
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: `/${locale}`,
+      languages,
+    },
     keywords: [
       'Inna Boiko',
       'Frontend Developer',
@@ -55,6 +66,8 @@ export async function generateMetadata({ params }) {
       title: t('title'),
       description: t('ogDescription'),
       type: 'website',
+      url: `/${locale}`,
+      siteName: 'Inna Boiko',
       locale: OG_LOCALES[locale] ?? 'it_IT',
     },
   };
