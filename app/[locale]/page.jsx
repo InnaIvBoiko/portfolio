@@ -1,8 +1,4 @@
-'use client';
-
-import { useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { setRequestLocale } from 'next-intl/server';
 
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -13,21 +9,13 @@ import Stack from '@/components/Stack';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
-gsap.registerPlugin(ScrollTrigger);
-
-export default function Home() {
-  const appRef = useRef(null);
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      // Global GSAP context if needed
-    }, appRef);
-
-    return () => ctx.revert();
-  }, []);
+export default async function Home({ params }) {
+  const { locale } = await params;
+  // Enable static rendering for this locale.
+  setRequestLocale(locale);
 
   return (
-    <div ref={appRef} className="relative w-full min-h-screen bg-background text-primary selection:bg-accent selection:text-primary">
+    <div className="relative w-full min-h-screen bg-background text-primary selection:bg-accent selection:text-primary">
       <Navbar />
       <main>
         <Hero />

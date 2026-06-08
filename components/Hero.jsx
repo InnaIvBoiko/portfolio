@@ -3,10 +3,12 @@
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Button from './Button';
 import HeroScene from './HeroScene';
 
 export default function Hero() {
+    const t = useTranslations('Hero');
     const containerRef = useRef(null);
 
     useLayoutEffect(() => {
@@ -44,29 +46,28 @@ export default function Hero() {
                 <div className="md:col-span-12 lg:col-span-10 flex flex-col items-start gap-6">
 
                     <div className="hero-text font-mono text-accent tracking-widest uppercase text-sm mb-2 flex items-center gap-3">
-                        <span>Inna Boiko / Frontend &amp; Full-Stack Developer</span>
+                        <span>{t('badge')}</span>
                         <span className="hidden sm:flex items-center gap-1 text-background/60 normal-case tracking-normal">
-                            <MapPin className="w-3.5 h-3.5" /> Bari, Italia
+                            <MapPin className="w-3.5 h-3.5" /> {t('location')}
                         </span>
                     </div>
 
                     <h1 className="flex flex-col gap-2">
                         <span className="hero-text text-title-sans text-4xl md:text-5xl lg:text-7xl text-background">
-                            Costruisco prodotti web
+                            {t('titleLine1')}
                         </span>
                         <span className="hero-text text-title-drama text-6xl md:text-8xl lg:text-[9rem] leading-[0.9] text-accent mt-2">
-                            che scalano.
+                            {t('titleLine2')}
                         </span>
                     </h1>
 
                     <p className="hero-text font-mono text-sm md:text-base text-background/70 max-w-2xl leading-relaxed mt-2">
-                        React, Next.js (App Router) e TypeScript. Specializzata in SaaS scalabili nel settore sanitario,
-                        con attenzione a performance, architetture pulite e sicurezza. Sviluppo potenziato dall&apos;AI.
+                        {t('description')}
                     </p>
 
                     <div className="hero-text mt-6 flex flex-wrap items-center gap-4">
                         <Button variant="accent" className="!px-10 !py-5 text-lg" onClick={() => document.getElementById('protocol')?.scrollIntoView()}>
-                            Esplora i progetti
+                            {t('ctaProjects')}
                         </Button>
 
                         {/* <a

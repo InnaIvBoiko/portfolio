@@ -3,13 +3,16 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslations } from 'next-intl';
 
 import Button from './Button';
 import Logo from './Logo';
+import LanguageSwitcher from './LanguageSwitcher';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
+    const t = useTranslations('Nav');
     const navRef = useRef(null);
 
     useLayoutEffect(() => {
@@ -37,15 +40,18 @@ export default function Navbar() {
             <Logo className="text-xl" />
 
             <div className="hidden md:flex items-center gap-8 font-mono text-sm uppercase tracking-widest">
-                <a href="#features" className="hover:text-accent transition-colors interactive-lift">Esperienza</a>
-                <a href="#philosophy" className="hover:text-accent transition-colors interactive-lift">Manifesto</a>
-                <a href="#protocol" className="hover:text-accent transition-colors interactive-lift">Progetti</a>
-                <a href="#stack" className="hover:text-accent transition-colors interactive-lift">Stack</a>
+                <a href="#features" className="hover:text-accent transition-colors interactive-lift">{t('experience')}</a>
+                <a href="#philosophy" className="hover:text-accent transition-colors interactive-lift">{t('manifesto')}</a>
+                <a href="#protocol" className="hover:text-accent transition-colors interactive-lift">{t('projects')}</a>
+                <a href="#stack" className="hover:text-accent transition-colors interactive-lift">{t('stack')}</a>
             </div>
 
-            <Button variant="accent" className="!py-2 !px-6 text-sm" onClick={() => document.getElementById('cta')?.scrollIntoView()}>
-                Contattami
-            </Button>
+            <div className="flex items-center gap-3">
+                <LanguageSwitcher />
+                <Button variant="accent" className="!py-2 !px-6 text-sm hidden sm:inline-block" onClick={() => document.getElementById('cta')?.scrollIntoView()}>
+                    {t('contact')}
+                </Button>
+            </div>
         </nav>
     );
 }

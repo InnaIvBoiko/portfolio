@@ -3,10 +3,12 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Philosophy() {
+    const t = useTranslations('Philosophy');
     const containerRef = useRef(null);
 
     useLayoutEffect(() => {
@@ -63,20 +65,24 @@ export default function Philosophy() {
             <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-16 md:gap-32">
                 <div className="max-w-xl">
                     <p className="reveal-line font-mono text-xs md:text-sm text-background/60 tracking-widest uppercase mb-6">
-                        L'approccio convenzionale
+                        {t('conventionalEyebrow')}
                     </p>
                     <h2 className="reveal-line text-2xl md:text-3xl lg:text-4xl text-title-sans text-background/80 leading-tight">
-                        Troppi progetti inseguono solo l'estetica, trascurando <span className="text-background">architettura, test e sicurezza</span> — finché non si rompono in produzione.
+                        {t.rich('conventionalText', {
+                            hl: (chunks) => <span className="text-background">{chunks}</span>,
+                        })}
                     </h2>
                 </div>
 
                 <div className="max-w-4xl self-end text-right">
                     <p className="reveal-line font-mono text-xs md:text-sm text-accent tracking-widest uppercase mb-6">
-                        Il Manifesto
+                        {t('manifestoEyebrow')}
                     </p>
                     <h2 className="reveal-line text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.1] tracking-tight">
-                        Parto da architetture pulite,<br />
-                        <span className="text-title-drama text-accent">test affidabili</span> e sicurezza<br /> by-design. L'AI per andare<br /> più veloce, non per saltare passaggi.
+                        {t.rich('manifestoText', {
+                            br: () => <br />,
+                            hl: (chunks) => <span className="text-title-drama text-accent">{chunks}</span>,
+                        })}
                     </h2>
                 </div>
             </div>

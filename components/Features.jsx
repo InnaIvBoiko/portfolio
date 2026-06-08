@@ -2,8 +2,10 @@
 
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
+import { useTranslations } from 'next-intl';
 
 function ShufflerCard({ title, items }) {
+    const t = useTranslations('Features');
     const containerRef = useRef(null);
     const [cards, setCards] = useState(items);
 
@@ -32,7 +34,7 @@ function ShufflerCard({ title, items }) {
     return (
         <div className="bg-background rounded-[2rem] p-8 shadow-2xl border border-primary/5 flex flex-col h-full relative overflow-hidden group">
             <h3 className="text-xl font-sans font-bold tracking-tight mb-2 text-primary">{title}</h3>
-            <p className="text-sm font-mono text-slate mb-8">SPA React · 13 feature slice · multi-tenant</p>
+            <p className="text-sm font-mono text-slate mb-8">{t('card1Subtitle')}</p>
 
             <div ref={containerRef} className="relative flex-1 min-h-[160px] flex flex-col justify-end gap-3 mt-auto">
                 {cards.map((item, i) => (
@@ -45,7 +47,7 @@ function ShufflerCard({ title, items }) {
                             opacity: 1 - (2 - i) * 0.2
                         }}
                     >
-                        <div className="font-mono text-xs text-accent mb-1">Slice {item.id}</div>
+                        <div className="font-mono text-xs text-accent mb-1">{t('sliceLabel', { id: item.id })}</div>
                         <div className="font-sans font-medium">{item.label}</div>
                     </div>
                 ))}
@@ -55,14 +57,17 @@ function ShufflerCard({ title, items }) {
 }
 
 function TypewriterCard({ title }) {
+    const t = useTranslations('Features');
     const textRef = useRef(null);
     const messages = [
-        "[AUTH] JWT CIFRATO · AES-GCM 256-BIT.",
-        "[SEC] CONTENT SECURITY POLICY ATTIVA.",
-        "[SESSION] INACTIVITY TIMER IN ASCOLTO.",
-        "[SYNC] LOGOUT CROSS-TAB (BROADCASTCHANNEL).",
-        "[MODEL] THREAT MODELING STRIDE APPLICATO."
+        t('terminal1'),
+        t('terminal2'),
+        t('terminal3'),
+        t('terminal4'),
+        t('terminal5'),
     ];
+    // Restart the typewriter when the locale (and therefore the messages) changes.
+    const messagesKey = messages.join('|');
 
     useLayoutEffect(() => {
         const el = textRef.current;
@@ -99,7 +104,8 @@ function TypewriterCard({ title }) {
 
         timeout = setTimeout(type, 1000);
         return () => clearTimeout(timeout);
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [messagesKey]);
 
     return (
         <div className="bg-primary text-background rounded-[2rem] p-8 shadow-xl border border-primary/20 flex flex-col h-full relative overflow-hidden group">
@@ -107,10 +113,10 @@ function TypewriterCard({ title }) {
                 <h3 className="text-xl font-sans font-bold tracking-tight text-accent">{title}</h3>
                 <div className="flex items-center gap-2 bg-slate px-3 py-1 rounded-full border border-primary/50">
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                    <span className="text-[10px] font-mono text-accent uppercase tracking-widest">Live Feed</span>
+                    <span className="text-[10px] font-mono text-accent uppercase tracking-widest">{t('liveFeed')}</span>
                 </div>
             </div>
-            <p className="text-sm font-mono text-background/60 mb-8">Sicurezza frontend · Web Crypto API</p>
+            <p className="text-sm font-mono text-background/60 mb-8">{t('card2Subtitle')}</p>
 
             <div className="mt-auto bg-[#0A0A0E] p-4 rounded-xl border border-slate/50 font-mono text-xs md:text-sm text-[#00FF41] leading-relaxed min-h-[120px] flex items-start">
                 <div>
@@ -124,10 +130,11 @@ function TypewriterCard({ title }) {
 }
 
 function SchedulerCard({ title }) {
+    const t = useTranslations('Features');
     const cursorRef = useRef(null);
     const btnRef = useRef(null);
     const containerRef = useRef(null);
-    const days = ['L', 'M', 'M', 'G', 'V', 'S', 'D'];
+    const days = t.raw('days');
     const [activeDay, setActiveDay] = useState(null);
 
     useLayoutEffect(() => {
@@ -159,7 +166,7 @@ function SchedulerCard({ title }) {
         <div ref={containerRef} className="bg-background rounded-[2rem] p-8 shadow-2xl border border-primary/5 flex flex-col h-full relative overflow-hidden group">
             <h3 className="text-xl font-sans font-bold tracking-tight mb-2 text-primary">{title}</h3>
             <p className="text-xs font-mono text-slate mb-8">
-                Calendario appuntamenti Day/Week/Month/Year, preventivi, fatturazione e dati clinici. Moduli SaaS reali, in produzione, su architettura multi-tenant.
+                {t('card3Desc')}
             </p>
 
             <div className="mt-auto relative z-10 bg-white p-4 rounded-xl border border-primary/10 shadow-sm">
@@ -176,7 +183,7 @@ function SchedulerCard({ title }) {
                 </div>
                 <div className="flex justify-end">
                     <div ref={btnRef} className="bg-accent text-primary text-xs font-mono font-bold px-4 py-1.5 rounded-full transition-colors">
-                        Salva
+                        {t('save')}
                     </div>
                 </div>
 
@@ -190,10 +197,11 @@ function SchedulerCard({ title }) {
 }
 
 export default function Features() {
+    const t = useTranslations('Features');
     const shufflerItems = [
-        { id: 1, label: 'Redux Toolkit + redux-persist' },
-        { id: 2, label: 'React Router 7 · clinic-context' },
-        { id: 3, label: '3.713 test · ~74% coverage' }
+        { id: 1, label: t('card1Item1') },
+        { id: 2, label: t('card1Item2') },
+        { id: 3, label: t('card1Item3') }
     ];
 
     return (
@@ -201,18 +209,18 @@ export default function Features() {
             <div className="max-w-7xl mx-auto">
                 <div className="mb-20 text-center max-w-3xl mx-auto">
                     <p className="font-mono text-xs md:text-sm text-accent tracking-widest uppercase mb-4">
-                        Esperienza · DentaLead — Nov 2024 → Presente
+                        {t('eyebrow')}
                     </p>
-                    <h2 className="text-4xl md:text-5xl text-title-sans mb-6">In produzione: ZeusDental</h2>
+                    <h2 className="text-4xl md:text-5xl text-title-sans mb-6">{t('title')}</h2>
                     <p className="text-slate font-mono text-sm md:text-base leading-relaxed">
-                        Unica sviluppatrice frontend di ZeusDental, piattaforma SaaS multi-tenant per studi dentistici. Tre pilastri del lavoro quotidiano: architettura, sicurezza e moduli reali in produzione.
+                        {t('intro')}
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto md:h-[450px]">
-                    <ShufflerCard title="Architettura SPA" items={shufflerItems} />
-                    <TypewriterCard title="Sicurezza Frontend" />
-                    <SchedulerCard title="Moduli SaaS" />
+                    <ShufflerCard title={t('card1Title')} items={shufflerItems} />
+                    <TypewriterCard title={t('card2Title')} />
+                    <SchedulerCard title={t('card3Title')} />
                 </div>
             </div>
         </section>

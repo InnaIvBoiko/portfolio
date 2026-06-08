@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Send, Loader2, CheckCircle2, AlertCircle, Copy, Check, Mail, Linkedin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 // 1. Crea una chiave gratuita su https://web3forms.com (inserisci inna_boiko@libero.it)
 // 2. Incolla qui sotto l'Access Key che ricevi via email.
@@ -12,6 +13,7 @@ const EMAIL = 'inna_boiko@libero.it';
 const WHATSAPP_NUMBER = '393892567905';
 
 export default function CTASection() {
+    const t = useTranslations('CTA');
     const [status, setStatus] = useState('idle'); // idle | sending | success | error
     const [error, setError] = useState('');
     const [copied, setCopied] = useState(false);
@@ -33,7 +35,7 @@ export default function CTASection() {
 
         const formData = new FormData(e.target);
         formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-        formData.append('subject', 'Nuovo messaggio dal portfolio');
+        formData.append('subject', t('subject'));
         formData.append('from_name', 'Portfolio Inna Boiko');
 
         try {
@@ -47,11 +49,11 @@ export default function CTASection() {
                 e.target.reset();
             } else {
                 setStatus('error');
-                setError(data.message || 'Invio non riuscito. Riprova.');
+                setError(data.message || t('errorGeneric'));
             }
         } catch {
             setStatus('error');
-            setError('Errore di rete. Riprova tra poco.');
+            setError(t('errorNetwork'));
         }
     }
 
@@ -63,23 +65,23 @@ export default function CTASection() {
 
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
                 <p className="font-mono text-xs md:text-sm text-accent tracking-widest uppercase mb-6">
-                    Disponibile · Remote · Part-time o Full-time
+                    {t('eyebrow')}
                 </p>
 
                 <h2 className="text-5xl md:text-7xl lg:text-8xl text-title-sans text-primary mb-6 leading-[0.9]">
-                    Lavoriamo<br />
-                    <span className="text-title-drama text-accent text-6xl md:text-8xl lg:text-[9rem]">insieme?</span>
+                    {t('titleLine1')}<br />
+                    <span className="text-title-drama text-accent text-6xl md:text-8xl lg:text-[9rem]">{t('titleAccent')}</span>
                 </h2>
 
                 <p className="text-slate font-mono max-w-xl mx-auto mb-12 text-sm md:text-base">
-                    Cerchi una sviluppatrice React / Next.js / TypeScript per il tuo prodotto? Scrivimi due righe sul progetto: rispondo volentieri.
+                    {t('intro')}
                 </p>
 
                 {status === 'success' ? (
                     <div className="w-full max-w-xl rounded-[2rem] border border-accent/30 bg-accent/5 p-10 flex flex-col items-center gap-4">
                         <CheckCircle2 className="w-12 h-12 text-accent" />
-                        <h3 className="text-2xl font-sans font-bold tracking-tight text-primary">Messaggio inviato!</h3>
-                        <p className="font-mono text-sm text-slate">Grazie, ti rispondo al più presto.</p>
+                        <h3 className="text-2xl font-sans font-bold tracking-tight text-primary">{t('successTitle')}</h3>
+                        <p className="font-mono text-sm text-slate">{t('successText')}</p>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className="w-full max-w-xl flex flex-col gap-4 text-left">
@@ -88,14 +90,14 @@ export default function CTASection() {
                                 type="text"
                                 name="name"
                                 required
-                                placeholder="Il tuo nome"
+                                placeholder={t('namePlaceholder')}
                                 className="font-mono text-sm px-5 py-4 rounded-2xl bg-background border border-primary/15 text-primary placeholder:text-slate/50 focus:outline-none focus:border-accent transition-colors"
                             />
                             <input
                                 type="email"
                                 name="email"
                                 required
-                                placeholder="La tua email"
+                                placeholder={t('emailPlaceholder')}
                                 className="font-mono text-sm px-5 py-4 rounded-2xl bg-background border border-primary/15 text-primary placeholder:text-slate/50 focus:outline-none focus:border-accent transition-colors"
                             />
                         </div>
@@ -103,7 +105,7 @@ export default function CTASection() {
                             name="message"
                             required
                             rows={5}
-                            placeholder="Due righe sul progetto…"
+                            placeholder={t('messagePlaceholder')}
                             className="font-mono text-sm px-5 py-4 rounded-2xl bg-background border border-primary/15 text-primary placeholder:text-slate/50 focus:outline-none focus:border-accent transition-colors resize-none"
                         />
 
@@ -116,9 +118,9 @@ export default function CTASection() {
                             className="group relative inline-flex items-center justify-center gap-2 px-10 py-5 rounded-[2rem] font-sans font-semibold tracking-tight text-lg bg-primary text-background border border-primary/20 hover:bg-slate transition-colors disabled:opacity-60 disabled:cursor-not-allowed mt-2"
                         >
                             {status === 'sending' ? (
-                                <><Loader2 className="w-5 h-5 animate-spin" /> Invio…</>
+                                <><Loader2 className="w-5 h-5 animate-spin" /> {t('sending')}</>
                             ) : (
-                                <><Send className="w-5 h-5" /> Invia messaggio</>
+                                <><Send className="w-5 h-5" /> {t('send')}</>
                             )}
                         </button>
 
@@ -132,13 +134,13 @@ export default function CTASection() {
 
                 {/* Fallback diretti */}
                 <div className="mt-10 flex flex-col items-center gap-4">
-                    <p className="font-mono text-[11px] uppercase tracking-widest text-slate/60">Oppure scrivimi direttamente</p>
+                    <p className="font-mono text-[11px] uppercase tracking-widest text-slate/60">{t('orDirect')}</p>
                     <div className="flex flex-wrap items-center justify-center gap-3">
                         <button
                             onClick={copyEmail}
                             className="inline-flex items-center gap-2 font-mono text-sm px-5 py-2.5 rounded-full border border-primary/20 text-primary hover:border-accent hover:text-accent transition-colors"
                         >
-                            {copied ? <><Check className="w-4 h-4 text-accent" /> Email copiata</> : <><Copy className="w-4 h-4" /> Copia email</>}
+                            {copied ? <><Check className="w-4 h-4 text-accent" /> {t('copied')}</> : <><Copy className="w-4 h-4" /> {t('copyEmail')}</>}
                         </button>
 
                         <a
@@ -162,7 +164,7 @@ export default function CTASection() {
                         </a>
 
                         <a
-                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent('Contatto dal portfolio')}`}
+                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(t('subject'))}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 font-mono text-sm px-5 py-2.5 rounded-full border border-primary/20 text-primary hover:border-accent hover:text-accent transition-colors"
