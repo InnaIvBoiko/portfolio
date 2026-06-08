@@ -62,6 +62,9 @@ export async function generateMetadata({ params }) {
     ],
     authors: [{ name: 'Inna Boiko' }],
     icons: { icon: '/favicon.svg' },
+    verification: {
+      google: 'hOqEK5MKPLoYvLiNJLPEOjxEjzLjfDlpNdqquPoxE5E',
+    },
     openGraph: {
       title: t('title'),
       description: t('ogDescription'),
