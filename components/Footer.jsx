@@ -1,9 +1,16 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Logo from './Logo';
 
 export default function Footer() {
     const t = useTranslations('Footer');
     const tNav = useTranslations('Nav');
+    const locale = useLocale();
+
+    // Section anchors live on the home page; prefix with the locale so they also
+    // work when the footer is rendered on a sub-page (e.g. /services).
+    const home = `/${locale}`;
+
     return (
         <footer className="bg-primary text-background rounded-t-[4rem] px-8 pt-20 pb-8 mt-[-4rem] relative z-50 overflow-hidden">
             <div className="max-w-7xl mx-auto">
@@ -21,10 +28,11 @@ export default function Footer() {
 
                     {/* Nav */}
                     <div className="flex flex-col gap-3 font-mono text-sm tracking-widest uppercase">
-                        <a href="#features" className="hover:text-accent transition-colors">{tNav('experience')}</a>
-                        <a href="#philosophy" className="hover:text-accent transition-colors">{tNav('manifesto')}</a>
-                        <a href="#protocol" className="hover:text-accent transition-colors">{tNav('projects')}</a>
-                        <a href="#stack" className="hover:text-accent transition-colors">{tNav('stack')}</a>
+                        <a href={`${home}#features`} className="hover:text-accent transition-colors">{tNav('experience')}</a>
+                        <a href={`${home}#philosophy`} className="hover:text-accent transition-colors">{tNav('manifesto')}</a>
+                        <a href={`${home}#protocol`} className="hover:text-accent transition-colors">{tNav('projects')}</a>
+                        <a href={`${home}#stack`} className="hover:text-accent transition-colors">{tNav('stack')}</a>
+                        <Link href="/services" className="hover:text-accent transition-colors">{tNav('services')}</Link>
                     </div>
 
                     {/* Social / Links */}
