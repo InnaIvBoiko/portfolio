@@ -31,8 +31,9 @@ export default function Footer() {
                         <a href={`${home}#features`} className="hover:text-accent transition-colors">{tNav('experience')}</a>
                         <a href={`${home}#philosophy`} className="hover:text-accent transition-colors">{tNav('manifesto')}</a>
                         <a href={`${home}#protocol`} className="hover:text-accent transition-colors">{tNav('projects')}</a>
-                        <a href={`${home}#stack`} className="hover:text-accent transition-colors">{tNav('stack')}</a>
                         <Link href="/services" className="hover:text-accent transition-colors">{tNav('services')}</Link>
+                        <Link href="/case-studies" className="hover:text-accent transition-colors">{tNav('caseStudies')}</Link>
+                        <Link href="/about" className="hover:text-accent transition-colors">{tNav('about')}</Link>
                     </div>
 
                     {/* Social / Links */}

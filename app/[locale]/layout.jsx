@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/site';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -38,9 +39,11 @@ export async function generateMetadata({ params }) {
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   // hreflang map so Google serves the right language and de-duplicates the locales.
+  // x-default tells Google which version to show when no language matches.
   const languages = Object.fromEntries(
     routing.locales.map((l) => [l, `/${l}`])
   );
+  languages['x-default'] = `/${routing.defaultLocale}`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -52,13 +55,23 @@ export async function generateMetadata({ params }) {
     },
     keywords: [
       'Inna Boiko',
-      'Frontend Developer',
-      'Full-Stack Developer',
+      'sviluppatrice web',
+      'sviluppatore web',
+      'web developer',
+      'freelance web developer',
+      'creazione siti web',
+      'siti web professionali',
+      'sito web con prenotazioni',
+      'applicazioni web',
+      'web app',
       'React',
       'Next.js',
       'TypeScript',
+      'Full-Stack Developer',
+      'sviluppo MVP',
+      'web developer Bari',
       'Bari',
-      'Remote',
+      'remote',
     ],
     authors: [{ name: 'Inna Boiko' }],
     icons: { icon: '/favicon.svg' },
@@ -102,7 +115,10 @@ export default async function LocaleLayout({ children, params }) {
           </filter>
           <rect width="100%" height="100%" filter="url(#noise)" />
         </svg>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <ScrollToTop />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
