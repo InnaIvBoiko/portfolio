@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        // Inline nav shows only on wide screens; below this we use a burger menu.
+        nav: '1440px',
+      },
       colors: {
         background: '#F0EFF4', // Ghost
         primary: '#0A0A14',    // Vuoto Profondo

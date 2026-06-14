@@ -2,8 +2,9 @@
 
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Button from './Button';
 import HeroScene from './HeroScene';
 
@@ -66,17 +67,16 @@ export default function Hero() {
                     </p>
 
                     <div className="hero-text mt-6 flex flex-wrap items-center gap-4">
-                        <Button variant="accent" className="!px-10 !py-5 text-lg" onClick={() => document.getElementById('protocol')?.scrollIntoView()}>
-                            {t('ctaProjects')}
+                        <Button variant="accent" className="!px-10 !py-5 text-lg" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
+                            {t('ctaQuote')}
                         </Button>
 
-                        {/* <a
-                            href="/Inna_Boiko_CV.pdf"
-                            download
-                            className="inline-flex items-center gap-2 px-8 py-5 rounded-[2rem] font-sans font-semibold tracking-tight text-lg text-background border border-background/30 hover:border-accent hover:text-accent transition-colors interactive-lift"
+                        <Link
+                            href="/services"
+                            className="group inline-flex items-center gap-2 px-8 py-5 rounded-[2rem] font-sans font-semibold tracking-tight text-lg text-background border border-background/30 hover:border-accent hover:text-accent transition-colors interactive-lift"
                         >
-                            <Download className="w-5 h-5" /> Scarica CV
-                        </a> */}
+                            {t('ctaServices')} <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                        </Link>
 
                         <div className="flex items-center gap-2">
                             <a
