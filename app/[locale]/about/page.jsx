@@ -57,6 +57,15 @@ export default async function AboutPage({ params }) {
                     </div>
                 </section>
 
+                {/* Bio section */}
+                <section className="py-20 md:py-28 px-6">
+                    <div className="max-w-2xl mx-auto flex flex-col gap-6">
+                        <p className="font-mono text-sm text-slate leading-relaxed">{t('bio1')}</p>
+                        <p className="font-mono text-sm text-slate leading-relaxed">{t('bio2')}</p>
+                        <p className="font-mono text-sm text-slate leading-relaxed">{t('bio3')}</p>
+                    </div>
+                </section>
+
                 <Stack />
             </main>
             <Footer />

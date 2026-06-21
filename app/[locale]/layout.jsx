@@ -72,6 +72,14 @@ export async function generateMetadata({ params }) {
       url: `/${locale}`,
       siteName: 'Inna Boiko',
       locale: OG_LOCALES[locale] ?? 'it_IT',
+      images: [
+        {
+          url: `/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: 'Inna Boiko — Frontend & Full-Stack Developer',
+        },
+      ],
     },
   };
 }

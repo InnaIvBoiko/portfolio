@@ -9,6 +9,7 @@ const PAGES = [
   { path: '/services', priority: 0.9 },
   { path: '/case-studies', priority: 0.8 },
   { path: '/about', priority: 0.7 },
+  { path: '/privacy', priority: 0.3 },
   ...caseStudySlugs.map((slug) => ({ path: `/case-studies/${slug}`, priority: 0.8 })),
 ];
 
