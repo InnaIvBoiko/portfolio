@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Inna Boiko — Sviluppatrice Web Freelance | Siti e Web App React/Next.js",
-    "description": "Sviluppatrice web freelance a Bari: realizzo siti web professionali, e-commerce e applicazioni su misura con React e Next.js. Veloci, sicuri e ottimizzati SEO. Disponibile da remoto, in tutta Italia.",
-    "ogDescription": "Siti web professionali e applicazioni su misura con React e Next.js. Veloci, sicuri, ottimizzati SEO. Bari, Italia — disponibile da remoto."
+    "title": "Inna Boiko — Frontend & Full-Stack Developer",
+    "description": "Inna Boiko, Sviluppatrice Frontend & Full-Stack: React, Next.js (App Router) e TypeScript. SaaS scalabili, performance, architetture pulite e sicurezza. Bari, Italia — disponibile da remoto.",
+    "ogDescription": "React, Next.js (App Router) e TypeScript. SaaS scalabili, performance e sicurezza. Bari, Italia — disponibile da remoto."
   },
   "Nav": {
     "experience": "Esperienza",
@@ -10,65 +10,9 @@
     "projects": "Progetti",
     "stack": "Stack",
     "services": "Servizi",
-    "caseStudies": "Casi studio",
-    "about": "Chi sono",
     "contact": "Contattami",
     "hire": "Assumimi",
     "language": "Lingua"
-  },
-  "About": {
-    "metaTitle": "Chi sono — Inna Boiko | Sviluppatrice Web Freelance a Bari",
-    "metaDescription": "Background, strumenti e formazione di Inna Boiko, sviluppatrice web freelance a Bari: React, Next.js, TypeScript, sicurezza e testing. Riconoscimenti e percorso accademico.",
-    "eyebrow": "Chi sono",
-    "titleLine1": "Background &",
-    "titleAccent": "competenze.",
-    "intro": "Sviluppatrice web freelance con base a Bari. Porto esperienza reale su SaaS in produzione, formazione continua e un approccio fatto di architetture pulite, test e sicurezza."
-  },
-  "CaseStudies": {
-    "metaTitle": "Casi studio — Inna Boiko | SaaS React & Next.js in produzione",
-    "metaDescription": "Casi studio reali di sviluppo React e Next.js: architettura, sicurezza e moduli SaaS in produzione. ZeusDental, piattaforma multi-tenant per studi dentistici.",
-    "indexEyebrow": "Casi studio",
-    "indexTitle": "Progetti",
-    "indexAccent": "in profondità.",
-    "indexIntro": "Non solo cosa ho costruito, ma come e perché. Contesto, sfide tecniche e risultati di prodotti reali in produzione.",
-    "readMore": "Leggi il caso studio",
-    "backToList": "Tutti i casi studio",
-    "contextLabel": "Contesto",
-    "challengeLabel": "Sfida",
-    "solutionLabel": "Soluzione",
-    "resultLabel": "Risultato",
-    "roleLabel": "Ruolo",
-    "sectorLabel": "Settore",
-    "periodLabel": "Periodo",
-    "stackLabel": "Stack",
-    "ctaTitle": "Hai un progetto simile?",
-    "ctaText": "Posso costruire per te architetture pulite, sicure e pronte per la produzione. Parliamone.",
-    "ctaButton": "Contattami",
-    "zeusdental": {
-      "cardTagline": "SaaS multi-tenant · Healthcare",
-      "title": "ZeusDental",
-      "subtitle": "Piattaforma SaaS multi-tenant per studi dentistici",
-      "summary": "Sviluppatrice frontend di una piattaforma sanitaria in produzione: architettura SPA a feature slice, sicurezza frontend by-design e moduli SaaS reali (appuntamenti, preventivi, fatturazione).",
-      "role": "Unica sviluppatrice frontend",
-      "sector": "Healthcare · Dental SaaS",
-      "period": "Nov 2024 → Presente",
-      "context": "ZeusDental è una piattaforma SaaS multi-tenant per la gestione di studi dentistici: appuntamenti, dati clinici, preventivi e fatturazione, con più cliniche servite dalla stessa applicazione. Mi occupo dell'intero frontend del prodotto, dall'architettura della SPA al rilascio in produzione.",
-      "challenge": "Gestire dati sanitari sensibili richiede sicurezza e affidabilità non negoziabili. La sfida: costruire una SPA scalabile e multi-tenant, con isolamento dei dati tra cliniche, sicurezza frontend robusta e moduli complessi (calendario, fatturazione) mantenendo il codice testabile e manutenibile da una sola persona.",
-      "solutionIntro": "Ho strutturato il lavoro su tre pilastri: architettura, sicurezza e moduli reali in produzione.",
-      "solArchTitle": "Architettura SPA",
-      "solArchDesc": "SPA React organizzata in 13 feature slice, Redux Toolkit + redux-persist per lo stato, React Router 7 e un clinic-context per isolare i dati di ogni tenant.",
-      "solSecTitle": "Sicurezza frontend",
-      "solSecDesc": "JWT cifrato (AES-GCM 256-bit, Web Crypto API), Content Security Policy, timer di inattività, logout cross-tab via BroadcastChannel e threat modeling STRIDE applicato.",
-      "solModTitle": "Moduli SaaS",
-      "solModDesc": "Calendario appuntamenti Day/Week/Month/Year, preventivi, fatturazione e dati clinici: moduli reali, in produzione, su architettura multi-tenant.",
-      "result": "La piattaforma è in produzione e usata quotidianamente dagli studi. La base di codice è coperta da una suite di test affidabile che protegge le evoluzioni e i rilasci.",
-      "stat1Value": "3.713",
-      "stat1Label": "Test automatici",
-      "stat2Value": "~74%",
-      "stat2Label": "Coverage",
-      "stat3Value": "13",
-      "stat3Label": "Feature slice"
-    }
   },
   "Services": {
     "metaTitle": "Servizi freelance — Inna Boiko | Sviluppo React & Next.js",
@@ -79,9 +23,6 @@
     "titleAccent": "prodotto web.",
     "intro": "Sviluppatrice React / Next.js / TypeScript. Trasformo la tua idea in un prodotto in produzione: veloce, sicuro e fatto per scalare. Dall'MVP alla piattaforma SaaS.",
     "hireCta": "Contattami",
-    "teaserEyebrow": "Servizi freelance",
-    "teaserTitle": "Cosa costruisco",
-    "teaserCta": "Tutti i servizi e i prezzi",
     "servicesEyebrow": "Cosa posso fare per te",
     "servicesTitle": "Servizi",
     "s1Title": "Sito web professionale con prenotazioni",
@@ -131,19 +72,17 @@
     "finalCta": "Contattami"
   },
   "Hero": {
-    "badge": "Inna Boiko · Sviluppatrice Web Freelance",
+    "badge": "Inna Boiko / Frontend & Full-Stack Developer",
     "location": "Bari, Italia",
-    "titleLine1": "Siti web e applicazioni",
-    "titleLine2": "su misura.",
-    "description": "Sviluppatrice web freelance specializzata in React e Next.js. Realizzo siti veloci, sicuri e ottimizzati SEO — dal sito professionale con prenotazioni alle piattaforme SaaS. A Bari, disponibile da remoto.",
-    "ctaQuote": "Richiedi un preventivo",
-    "ctaServices": "Vedi i servizi",
+    "titleLine1": "Costruisco prodotti web",
+    "titleLine2": "che scalano.",
+    "description": "React, Next.js (App Router) e TypeScript. Specializzata in SaaS scalabili nel settore sanitario, con attenzione a performance, architetture pulite e sicurezza. Sviluppo potenziato dall'AI.",
     "ctaProjects": "Esplora i progetti"
   },
   "Features": {
     "eyebrow": "Esperienza · DentaLead — Nov 2024 → Presente",
     "title": "In produzione: ZeusDental",
-    "intro": "Sviluppatrice frontend di ZeusDental, piattaforma SaaS multi-tenant per studi dentistici. Tre pilastri del lavoro quotidiano: architettura, sicurezza e moduli reali in produzione.",
+    "intro": "Unica sviluppatrice frontend di ZeusDental, piattaforma SaaS multi-tenant per studi dentistici. Tre pilastri del lavoro quotidiano: architettura, sicurezza e moduli reali in produzione.",
     "card1Title": "Architettura SPA",
     "card1Subtitle": "SPA React · 13 feature slice · multi-tenant",
     "sliceLabel": "Slice {id}",
@@ -161,22 +100,7 @@
     "card3Title": "Moduli SaaS",
     "card3Desc": "Calendario appuntamenti Day/Week/Month/Year, preventivi, fatturazione e dati clinici. Moduli SaaS reali, in produzione, su architettura multi-tenant.",
     "days": ["L", "M", "M", "G", "V", "S", "D"],
-    "save": "Salva",
-    "caseStudyCta": "Leggi il caso studio completo"
-  },
-  "FAQ": {
-    "eyebrow": "Domande frequenti",
-    "title": "FAQ",
-    "q1": "Quanto costa un sito web?",
-    "a1": "Dipende da funzionalità e complessità. I progetti partono da 1.500 €, mentre un MVP per startup va da 3.000 a 8.000 €. Trovi tutte le fasce nella pagina Servizi e ti preparo un preventivo chiaro in anticipo, senza sorprese.",
-    "q2": "Quanto tempo serve per realizzarlo?",
-    "a2": "Un sito professionale richiede in genere 2-4 settimane; un MVP completo 3-5 settimane. Le tempistiche esatte le concordiamo dopo aver definito insieme lo scopo del progetto.",
-    "q3": "Lavori da remoto? Posso essere fuori Bari?",
-    "a3": "Sì. Lavoro da remoto con clienti in tutta Italia e all'estero. Ci sentiamo in videochiamata e ti tengo aggiornata/o a ogni step del progetto.",
-    "q4": "Che differenza c'è tra te e un'agenzia?",
-    "a4": "Parli direttamente con chi sviluppa il tuo prodotto: niente intermediari, decisioni più rapide e costi più accessibili. Porto esperienza reale su SaaS in produzione, sicurezza e performance.",
-    "q5": "Offri assistenza dopo il lancio?",
-    "a5": "Sì. Offro pacchetti di manutenzione (da 100 €/mese) per aggiornamenti, fix ed evoluzioni, così il tuo sito resta veloce e sicuro nel tempo."
+    "save": "Salva"
   },
   "Philosophy": {
     "conventionalEyebrow": "L'approccio convenzionale",

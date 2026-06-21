@@ -2,10 +2,7 @@
 
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
-import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-
-import { Link } from '@/i18n/navigation';
 
 function ShufflerCard({ title, items }) {
     const t = useTranslations('Features');
@@ -224,15 +221,6 @@ export default function Features() {
                     <ShufflerCard title={t('card1Title')} items={shufflerItems} />
                     <TypewriterCard title={t('card2Title')} />
                     <SchedulerCard title={t('card3Title')} />
-                </div>
-
-                <div className="mt-14 flex justify-center">
-                    <Link
-                        href="/case-studies/zeusdental"
-                        className="group inline-flex items-center gap-2 font-mono text-sm font-semibold px-7 py-3.5 rounded-full border border-primary/20 text-primary hover:border-accent hover:text-accent transition-colors"
-                    >
-                        {t('caseStudyCta')} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
                 </div>
             </div>
         </section>
