@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Inna Boiko — Freelance Web Developer | Websites & Web Apps in React/Next.js",
-    "description": "Freelance web developer based in Bari, Italy: I build professional websites, e-commerce and custom web apps with React and Next.js. Fast, secure and SEO-optimized. Available remotely.",
-    "ogDescription": "Professional websites and custom web apps with React and Next.js. Fast, secure, SEO-optimized. Bari, Italy — available remotely."
+    "title": "Inna Boiko — Frontend & Full-Stack Developer",
+    "description": "Inna Boiko, Frontend & Full-Stack Developer: React, Next.js (App Router) and TypeScript. Scalable SaaS, performance, clean architecture and security. Bari, Italy — available remotely.",
+    "ogDescription": "React, Next.js (App Router) and TypeScript. Scalable SaaS, performance and security. Bari, Italy — available remotely."
   },
   "Nav": {
     "experience": "Experience",
@@ -10,65 +10,9 @@
     "projects": "Projects",
     "stack": "Stack",
     "services": "Services",
-    "caseStudies": "Case studies",
-    "about": "About",
     "contact": "Get in touch",
     "hire": "Hire me",
     "language": "Language"
-  },
-  "About": {
-    "metaTitle": "About — Inna Boiko | Freelance Web Developer in Bari",
-    "metaDescription": "Background, tools and education of Inna Boiko, freelance web developer in Bari: React, Next.js, TypeScript, security and testing. Awards and academic path.",
-    "eyebrow": "About me",
-    "titleLine1": "Background &",
-    "titleAccent": "skills.",
-    "intro": "Freelance web developer based in Bari. I bring real experience with production SaaS, continuous learning and an approach built on clean architecture, testing and security."
-  },
-  "CaseStudies": {
-    "metaTitle": "Case studies — Inna Boiko | React & Next.js SaaS in production",
-    "metaDescription": "Real React and Next.js development case studies: architecture, security and SaaS modules in production. ZeusDental, a multi-tenant platform for dental clinics.",
-    "indexEyebrow": "Case studies",
-    "indexTitle": "Projects",
-    "indexAccent": "in depth.",
-    "indexIntro": "Not just what I built, but how and why. Context, technical challenges and results of real products in production.",
-    "readMore": "Read the case study",
-    "backToList": "All case studies",
-    "contextLabel": "Context",
-    "challengeLabel": "Challenge",
-    "solutionLabel": "Solution",
-    "resultLabel": "Result",
-    "roleLabel": "Role",
-    "sectorLabel": "Sector",
-    "periodLabel": "Period",
-    "stackLabel": "Stack",
-    "ctaTitle": "Have a similar project?",
-    "ctaText": "I can build clean, secure, production-ready architectures for you. Let's talk.",
-    "ctaButton": "Get in touch",
-    "zeusdental": {
-      "cardTagline": "Multi-tenant SaaS · Healthcare",
-      "title": "ZeusDental",
-      "subtitle": "Multi-tenant SaaS platform for dental clinics",
-      "summary": "Frontend developer of a healthcare platform in production: feature-slice SPA architecture, security-by-design on the frontend and real SaaS modules (appointments, quotes, invoicing).",
-      "role": "Sole frontend developer",
-      "sector": "Healthcare · Dental SaaS",
-      "period": "Nov 2024 → Present",
-      "context": "ZeusDental is a multi-tenant SaaS platform for managing dental clinics: appointments, clinical data, quotes and invoicing, with multiple clinics served by the same application. I own the product's entire frontend, from SPA architecture to production releases.",
-      "challenge": "Handling sensitive medical data demands non-negotiable security and reliability. The challenge: build a scalable, multi-tenant SPA with data isolation between clinics, robust frontend security and complex modules (calendar, invoicing) while keeping the code testable and maintainable by a single person.",
-      "solutionIntro": "I structured the work around three pillars: architecture, security and real production modules.",
-      "solArchTitle": "SPA architecture",
-      "solArchDesc": "React SPA organized into 13 feature slices, Redux Toolkit + redux-persist for state, React Router 7 and a clinic-context to isolate each tenant's data.",
-      "solSecTitle": "Frontend security",
-      "solSecDesc": "Encrypted JWT (AES-GCM 256-bit, Web Crypto API), Content Security Policy, inactivity timer, cross-tab logout via BroadcastChannel and applied STRIDE threat modeling.",
-      "solModTitle": "SaaS modules",
-      "solModDesc": "Day/Week/Month/Year appointment calendar, quotes, invoicing and clinical data: real modules, in production, on a multi-tenant architecture.",
-      "result": "The platform is in production and used daily by clinics. The codebase is covered by a reliable test suite that protects evolutions and releases.",
-      "stat1Value": "3,713",
-      "stat1Label": "Automated tests",
-      "stat2Value": "~74%",
-      "stat2Label": "Coverage",
-      "stat3Value": "13",
-      "stat3Label": "Feature slices"
-    }
   },
   "Services": {
     "metaTitle": "Freelance services — Inna Boiko | React & Next.js development",
@@ -79,9 +23,6 @@
     "titleAccent": "web product.",
     "intro": "React / Next.js / TypeScript developer. I turn your idea into a production product: fast, secure and built to scale. From MVP to SaaS platform.",
     "hireCta": "Get in touch",
-    "teaserEyebrow": "Freelance services",
-    "teaserTitle": "What I build",
-    "teaserCta": "All services and pricing",
     "servicesEyebrow": "What I can do for you",
     "servicesTitle": "Services",
     "s1Title": "Professional website with booking",
@@ -131,19 +72,17 @@
     "finalCta": "Get in touch"
   },
   "Hero": {
-    "badge": "Inna Boiko · Freelance Web Developer",
+    "badge": "Inna Boiko / Frontend & Full-Stack Developer",
     "location": "Bari, Italy",
-    "titleLine1": "Custom websites",
-    "titleLine2": "and web apps.",
-    "description": "Freelance web developer specialized in React and Next.js. I build fast, secure, SEO-optimized sites — from a professional booking website to SaaS platforms. Based in Bari, available remotely.",
-    "ctaQuote": "Get a quote",
-    "ctaServices": "See services",
+    "titleLine1": "I build web products",
+    "titleLine2": "that scale.",
+    "description": "React, Next.js (App Router) and TypeScript. Specialized in scalable SaaS for the healthcare sector, with a focus on performance, clean architecture and security. AI-augmented development.",
     "ctaProjects": "Explore the projects"
   },
   "Features": {
     "eyebrow": "Experience · DentaLead — Nov 2024 → Present",
     "title": "In production: ZeusDental",
-    "intro": "Frontend developer of ZeusDental, a multi-tenant SaaS platform for dental practices. Three pillars of the daily work: architecture, security and real modules in production.",
+    "intro": "Sole frontend developer of ZeusDental, a multi-tenant SaaS platform for dental practices. Three pillars of the daily work: architecture, security and real modules in production.",
     "card1Title": "SPA Architecture",
     "card1Subtitle": "React SPA · 13 feature slices · multi-tenant",
     "sliceLabel": "Slice {id}",
@@ -161,22 +100,7 @@
     "card3Title": "SaaS Modules",
     "card3Desc": "Appointment calendar Day/Week/Month/Year, quotes, invoicing and clinical data. Real SaaS modules, in production, on a multi-tenant architecture.",
     "days": ["M", "T", "W", "T", "F", "S", "S"],
-    "save": "Save",
-    "caseStudyCta": "Read the full case study"
-  },
-  "FAQ": {
-    "eyebrow": "Frequently asked questions",
-    "title": "FAQ",
-    "q1": "How much does a website cost?",
-    "a1": "It depends on features and complexity. Projects start at €1,500, while a startup MVP ranges from €3,000 to €8,000. You'll find all tiers on the Services page, and I prepare a clear quote upfront, no surprises.",
-    "q2": "How long does it take to build?",
-    "a2": "A professional website usually takes 2-4 weeks; a complete MVP 3-5 weeks. We agree on exact timelines once we've defined the project scope together.",
-    "q3": "Do you work remotely? Can I be outside Bari?",
-    "a3": "Yes. I work remotely with clients across Italy and abroad. We meet over video calls and I keep you updated at every step of the project.",
-    "q4": "What's the difference between you and an agency?",
-    "a4": "You talk directly with the person building your product: no middlemen, faster decisions and more accessible costs. I bring real experience with production SaaS, security and performance.",
-    "q5": "Do you offer support after launch?",
-    "a5": "Yes. I offer maintenance packages (from €100/month) for updates, fixes and improvements, keeping your site fast and secure over time."
+    "save": "Save"
   },
   "Philosophy": {
     "conventionalEyebrow": "The conventional approach",

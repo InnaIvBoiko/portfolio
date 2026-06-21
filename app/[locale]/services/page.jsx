@@ -17,7 +17,6 @@ export async function generateMetadata({ params }) {
     const languages = Object.fromEntries(
         routing.locales.map((l) => [l, `/${l}/services`])
     );
-    languages['x-default'] = `/${routing.defaultLocale}/services`;
 
     return {
         title: t('metaTitle'),

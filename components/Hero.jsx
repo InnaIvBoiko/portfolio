@@ -2,9 +2,8 @@
 
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Github, Linkedin, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import Button from './Button';
 import HeroScene from './HeroScene';
 
@@ -43,7 +42,7 @@ export default function Hero() {
             <HeroScene />
 
             {/* Content */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-28 grid grid-cols-1 md:grid-cols-12">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-24 md:pb-28 grid grid-cols-1 md:grid-cols-12">
                 <div className="md:col-span-12 lg:col-span-10 flex flex-col items-start gap-6">
 
                     <div className="hero-text font-mono text-accent tracking-widest uppercase text-sm mb-2 flex items-center gap-3">
@@ -67,16 +66,17 @@ export default function Hero() {
                     </p>
 
                     <div className="hero-text mt-6 flex flex-wrap items-center gap-4">
-                        <Button variant="accent" className="!px-10 !py-5 text-lg" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
-                            {t('ctaQuote')}
+                        <Button variant="accent" className="!px-10 !py-5 text-lg" onClick={() => document.getElementById('protocol')?.scrollIntoView()}>
+                            {t('ctaProjects')}
                         </Button>
 
-                        <Link
-                            href="/services"
-                            className="group inline-flex items-center gap-2 px-8 py-5 rounded-[2rem] font-sans font-semibold tracking-tight text-lg text-background border border-background/30 hover:border-accent hover:text-accent transition-colors interactive-lift"
+                        {/* <a
+                            href="/Inna_Boiko_CV.pdf"
+                            download
+                            className="inline-flex items-center gap-2 px-8 py-5 rounded-[2rem] font-sans font-semibold tracking-tight text-lg text-background border border-background/30 hover:border-accent hover:text-accent transition-colors interactive-lift"
                         >
-                            {t('ctaServices')} <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                            <Download className="w-5 h-5" /> Scarica CV
+                        </a> */}
 
                         <div className="flex items-center gap-2">
                             <a
@@ -98,9 +98,7 @@ export default function Hero() {
                                 <Linkedin className="w-5 h-5" />
                             </a>
                             <a
-                                href="https://mail.google.com/mail/?view=cm&fs=1&to=inna_boiko@libero.it&su=Contatto%20dal%20portfolio"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="mailto:inna_boiko@libero.it"
                                 aria-label="Email"
                                 className="p-3 rounded-full border border-background/20 text-background hover:text-accent hover:border-accent/50 transition-colors interactive-lift"
                             >
