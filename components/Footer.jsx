@@ -33,13 +33,15 @@ export default function Footer() {
                         <a href={`${home}#protocol`} className="hover:text-accent transition-colors">{tNav('projects')}</a>
                         <a href={`${home}#stack`} className="hover:text-accent transition-colors">{tNav('stack')}</a>
                         <Link href="/services" className="hover:text-accent transition-colors">{tNav('services')}</Link>
+                        <Link href="/case-studies" className="hover:text-accent transition-colors">{tNav('caseStudies')}</Link>
+                        <Link href="/about" className="hover:text-accent transition-colors">{tNav('about')}</Link>
                     </div>
 
                     {/* Social / Links */}
                     <div className="flex flex-col gap-3 font-mono text-sm tracking-widest uppercase">
                         <a href="https://linkedin.com/in/inna-boiko" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
                         <a href="https://github.com/InnaIvBoiko" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=inna_boiko@libero.it&su=Contatto%20dal%20portfolio" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">{t('contact')}</a>
+                        <a href="mailto:inna_boiko@libero.it" className="hover:text-accent transition-colors">{t('contact')}</a>
                         {/* <a href="/Inna_Boiko_CV.pdf" download className="hover:text-accent transition-colors">Scarica CV</a> */}
                     </div>
 
