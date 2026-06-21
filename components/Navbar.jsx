@@ -110,6 +110,7 @@ export default function Navbar() {
                     <a onClick={close} href={`${home}#protocol`} className="px-4 py-3 rounded-2xl font-mono text-sm uppercase tracking-widest hover:text-accent hover:bg-primary/5 transition-colors">{t('projects')}</a>
                     <a onClick={close} href={`${home}#stack`} className="px-4 py-3 rounded-2xl font-mono text-sm uppercase tracking-widest hover:text-accent hover:bg-primary/5 transition-colors">{t('stack')}</a>
                     <Link onClick={close} href="/services" className="px-4 py-3 rounded-2xl font-mono text-sm uppercase tracking-widest hover:text-accent hover:bg-primary/5 transition-colors">{t('services')}</Link>
+                    <Link onClick={close} href="/case-studies" className="px-4 py-3 rounded-2xl font-mono text-sm uppercase tracking-widest hover:text-accent hover:bg-primary/5 transition-colors">{t('caseStudies')}</Link>
 
                     <div className="mt-2 px-2 pt-3 border-t border-primary/10">
                         <LanguageSwitcher />
