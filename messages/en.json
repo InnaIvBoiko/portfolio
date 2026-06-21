@@ -187,7 +187,9 @@
     "subject": "New message from the portfolio",
     "orDirect": "Or reach me directly",
     "copyEmail": "Copy email",
-    "copied": "Email copied"
+    "copied": "Email copied",
+    "consentLabel": "I have read and accept the",
+    "consentLinkText": "Privacy Policy"
   },
   "About": {
     "metaTitle": "About — Inna Boiko | Frontend & Full-Stack Developer",
@@ -195,7 +197,10 @@
     "eyebrow": "About me",
     "titleLine1": "Background &",
     "titleAccent": "skills.",
-    "intro": "Frontend & Full-Stack Developer based in Bari. I bring real experience with production SaaS, continuous learning and an approach built on clean architecture, testing and security."
+    "intro": "Frontend & Full-Stack Developer based in Bari. I bring real experience with production SaaS, continuous learning and an approach built on clean architecture, testing and security.",
+    "bio1": "I'm Inna Boiko, a Frontend & Full-Stack Developer based in Bari, Italy. I build web products with React, Next.js and TypeScript — from architecture to deployment, with a focus on performance, security and testable code.",
+    "bio2": "I work as the sole frontend developer of ZeusDental, a multi-tenant SaaS platform in the healthcare sector, in production since November 2024. This experience taught me to make architectural decisions autonomously, handle the security of sensitive health data and maintain a suite of over 3,700 automated tests.",
+    "bio3": "I hold a degree in Economics and Cybernetics and am completing a Master's in Computer Science (Software Engineering & AI) at Neoversity / IT University. I integrate AI tools into my daily workflow — not to skip steps, but to move faster while maintaining quality and control over the code."
   },
   "CaseStudies": {
     "metaTitle": "Case studies — Inna Boiko | Next.js & React in production",
@@ -318,10 +323,33 @@
       "stat3Label": "Categorized sectors"
     }
   },
+  "Privacy": {
+    "metaTitle": "Privacy Policy — Inna Boiko",
+    "metaDescription": "Privacy policy under GDPR: data collected, purposes and your rights.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "s1Title": "Data Controller",
+    "s1Body": "Inna Boiko, Frontend & Full-Stack Developer — Bari, Italy. Email: inna_boiko@libero.it",
+    "s2Title": "Data collected",
+    "s2Body": "Through the contact form I collect name, email address and message. I do not use tracking cookies, install third-party trackers or collect browsing data.",
+    "s3Title": "Purpose and legal basis",
+    "s3Body": "Data is processed solely to respond to your contact request (Art. 6(1)(b) GDPR — processing necessary for pre-contractual measures at the request of the data subject).",
+    "s4Title": "Recipients",
+    "s4Body": "Messages are delivered via Web3Forms (web3forms.com), acting as data processor. I do not share your data with any other party.",
+    "s5Title": "Retention period",
+    "s5Body": "Data is retained for as long as needed to respond to your request and then deleted.",
+    "s6Title": "Your rights",
+    "s6Body": "Under Arts. 15–22 GDPR you have the right to access, rectify, erase, restrict, port or object to processing of your data. To exercise these rights write to inna_boiko@libero.it.",
+    "s7Title": "Supervisory authority",
+    "s7Body": "You have the right to lodge a complaint with the Garante per la Protezione dei Dati Personali (garanteprivacy.it).",
+    "s8Title": "Cookies",
+    "s8Body": "This site does not use tracking cookies or third-party trackers. The only technical cookies are those set by next-intl to store your preferred language."
+  },
   "Footer": {
     "description": "Inna Boiko — Frontend & Full-Stack Developer. React, Next.js (App Router) and TypeScript, focused on scalable SaaS, performance and security. Bari, Italy · available remotely.",
     "contact": "Contact",
     "copyright": "© 2026 Inna Boiko · Bari, Italy. All rights reserved.",
-    "openToWork": "Open to work"
+    "openToWork": "Open to work",
+    "privacy": "Privacy Policy"
   }
 }

@@ -72,6 +72,20 @@ export async function generateMetadata({ params }) {
       url: `/${locale}`,
       siteName: 'Inna Boiko',
       locale: OG_LOCALES[locale] ?? 'it_IT',
+      images: [
+        {
+          url: `/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: 'Inna Boiko — Frontend & Full-Stack Developer',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('ogDescription'),
+      images: [`/${locale}/opengraph-image`],
     },
   };
 }
@@ -103,6 +117,29 @@ export default async function LocaleLayout({ children, params }) {
           <rect width="100%" height="100%" filter="url(#noise)" />
         </svg>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Inna Boiko',
+              jobTitle: 'Frontend & Full-Stack Developer',
+              url: SITE_URL,
+              email: 'inna_boiko@libero.it',
+              sameAs: [
+                'https://linkedin.com/in/inna-boiko',
+                'https://github.com/InnaIvBoiko',
+              ],
+              knowsAbout: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Auth.js', 'Drizzle ORM', 'Tailwind CSS'],
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Bari',
+                addressCountry: 'IT',
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );

@@ -42,6 +42,7 @@ export default function Footer() {
                         <a href="https://linkedin.com/in/inna-boiko" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
                         <a href="https://github.com/InnaIvBoiko" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
                         <a href="mailto:inna_boiko@libero.it" className="hover:text-accent transition-colors">{t('contact')}</a>
+                        <Link href="/privacy" className="hover:text-accent transition-colors">{t('privacy')}</Link>
                         {/* <a href="/Inna_Boiko_CV.pdf" download className="hover:text-accent transition-colors">Scarica CV</a> */}
                     </div>
 

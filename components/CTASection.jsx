@@ -1,12 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, Loader2, CheckCircle2, AlertCircle, Copy, Check, Mail, Linkedin } from 'lucide-react';
+import { Send, Loader2, CheckCircle2, AlertCircle, Copy, Check, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
-// 1. Crea una chiave gratuita su https://web3forms.com (inserisci inna_boiko@libero.it)
-// 2. Incolla qui sotto l'Access Key che ricevi via email.
-const WEB3FORMS_ACCESS_KEY = 'ac7334c6-4b0c-444d-b607-de4bf04ab583';
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
 
 const EMAIL = 'inna_boiko@libero.it';
 // Numero WhatsApp in formato internazionale, solo cifre (es. 393331234567). Sostituisci il segnaposto.
@@ -112,6 +111,22 @@ export default function CTASection() {
                         {/* Honeypot anti-spam */}
                         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
+                        {/* GDPR consent */}
+                        <label className="flex items-start gap-3 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                name="privacy_consent"
+                                required
+                                className="mt-0.5 w-4 h-4 rounded border border-primary/30 accent-accent flex-shrink-0"
+                            />
+                            <span className="font-mono text-xs text-slate/70 leading-relaxed">
+                                {t('consentLabel')}{' '}
+                                <Link href="/privacy" className="text-accent hover:underline" target="_blank" rel="noopener">
+                                    {t('consentLinkText')}
+                                </Link>
+                            </span>
+                        </label>
+
                         <button
                             type="submit"
                             disabled={status === 'sending'}
@@ -160,7 +175,8 @@ export default function CTASection() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 font-mono text-sm px-5 py-2.5 rounded-full border border-primary/20 text-primary hover:border-accent hover:text-accent transition-colors"
                         >
-                            <Linkedin className="w-4 h-4" /> LinkedIn
+                            <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
                         </a>
 
                         <a

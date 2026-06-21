@@ -187,7 +187,9 @@
     "subject": "Nuovo messaggio dal portfolio",
     "orDirect": "Oppure scrivimi direttamente",
     "copyEmail": "Copia email",
-    "copied": "Email copiata"
+    "copied": "Email copiata",
+    "consentLabel": "Ho letto e accetto la",
+    "consentLinkText": "Privacy Policy"
   },
   "About": {
     "metaTitle": "Chi sono — Inna Boiko | Frontend & Full-Stack Developer",
@@ -195,7 +197,10 @@
     "eyebrow": "Chi sono",
     "titleLine1": "Background &",
     "titleAccent": "competenze.",
-    "intro": "Frontend & Full-Stack Developer con base a Bari. Porto esperienza reale su SaaS in produzione, formazione continua e un approccio fatto di architetture pulite, test e sicurezza."
+    "intro": "Frontend & Full-Stack Developer con base a Bari. Porto esperienza reale su SaaS in produzione, formazione continua e un approccio fatto di architetture pulite, test e sicurezza.",
+    "bio1": "Mi chiamo Inna Boiko e sono una Frontend & Full-Stack Developer con base a Bari. Costruisco prodotti web con React, Next.js e TypeScript — dall'architettura al deploy, con un focus su performance, sicurezza e codice testabile.",
+    "bio2": "Lavoro come unica sviluppatrice frontend di ZeusDental, una piattaforma SaaS multi-tenant nel settore healthcare in produzione dal novembre 2024. Questa esperienza mi ha insegnato a prendere decisioni architetturali autonome, gestire la sicurezza di dati sanitari sensibili e mantenere una suite di oltre 3.700 test automatici.",
+    "bio3": "Sono laureata in Economia e Cibernetica e sto completando un Master in Computer Science (Software Engineering & AI) presso Neoversity / IT University. Integro strumenti AI nel workflow quotidiano — non per saltare i passaggi, ma per andare più veloce mantenendo qualità e controllo sul codice."
   },
   "CaseStudies": {
     "metaTitle": "Casi studio — Inna Boiko | Next.js & React in produzione",
@@ -318,10 +323,33 @@
       "stat3Label": "Settori categorizzati"
     }
   },
+  "Privacy": {
+    "metaTitle": "Privacy Policy — Inna Boiko",
+    "metaDescription": "Informativa sulla privacy ai sensi del GDPR: dati raccolti, finalità e diritti dell'interessato.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Ultimo aggiornamento: giugno 2026",
+    "s1Title": "Titolare del trattamento",
+    "s1Body": "Inna Boiko, Frontend & Full-Stack Developer — Bari, Italia. Email: inna_boiko@libero.it",
+    "s2Title": "Dati raccolti",
+    "s2Body": "Tramite il modulo di contatto raccolgo nome, indirizzo email e messaggio. Non uso cookie di profilazione, non installo tracker di terze parti e non raccolgo dati di navigazione.",
+    "s3Title": "Finalità e base giuridica",
+    "s3Body": "I dati vengono trattati esclusivamente per rispondere alla tua richiesta di contatto (art. 6, par. 1, lett. b GDPR — esecuzione di misure precontrattuali su richiesta dell'interessato).",
+    "s4Title": "Destinatari",
+    "s4Body": "I messaggi vengono recapitati tramite Web3Forms (web3forms.com), che agisce come responsabile del trattamento. Non cedo i tuoi dati ad altri soggetti.",
+    "s5Title": "Periodo di conservazione",
+    "s5Body": "I dati vengono conservati per il tempo necessario a rispondere alla tua richiesta e, successivamente, eliminati.",
+    "s6Title": "I tuoi diritti",
+    "s6Body": "Ai sensi degli artt. 15–22 GDPR hai il diritto di accedere, rettificare, cancellare, limitare, portare o opporti al trattamento dei tuoi dati. Per esercitare questi diritti scrivi a inna_boiko@libero.it.",
+    "s7Title": "Autorità di controllo",
+    "s7Body": "Hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (garanteprivacy.it).",
+    "s8Title": "Cookie",
+    "s8Body": "Questo sito non usa cookie di profilazione né tracker di terze parti. I soli cookie tecnici necessari sono quelli impostati da next-intl per memorizzare la lingua preferita."
+  },
   "Footer": {
     "description": "Inna Boiko — Sviluppatrice Frontend & Full-Stack. React, Next.js (App Router) e TypeScript, con focus su SaaS scalabili, performance e sicurezza. Bari, Italia · disponibile da remoto.",
     "contact": "Contatto",
     "copyright": "© 2026 Inna Boiko · Bari, Italia. Tutti i diritti riservati.",
-    "openToWork": "Open to work"
+    "openToWork": "Open to work",
+    "privacy": "Privacy Policy"
   }
 }
